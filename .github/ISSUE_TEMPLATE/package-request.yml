@@ -30,6 +30,17 @@ body:
     attributes:
       label: Anything we should know
       description: How it is built, where the static output ends up, what it needs at runtime, what must not change
+  - type: dropdown
+    id: source
+    attributes:
+      label: How did you hear about Extella?
+      options:
+        - Email from Extella
+        - A post or issue in my repository
+        - A newsletter, blog or article
+        - Social media
+        - A friend or colleague
+        - Other
   - type: checkboxes
     id: consent
     attributes:
