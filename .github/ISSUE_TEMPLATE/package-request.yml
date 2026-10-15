@@ -1,0 +1,39 @@
+name: Package request
+description: Ask for an open-source browser app to be packaged for Extella
+title: "Package: <owner>/<repo>"
+labels: ["request"]
+body:
+  - type: input
+    id: repo
+    attributes:
+      label: Repository
+      description: Link to the GitHub repository
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+  - type: dropdown
+    id: relation
+    attributes:
+      label: Who are you to this project?
+      options:
+        - I am the author or a maintainer
+        - I use it and would like it in Extella
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License
+      placeholder: MIT, Apache-2.0, BSD-3-Clause, …
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything we should know
+      description: How it is built, where the static output ends up, what it needs at runtime, what must not change
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Before you send
+      options:
+        - label: I understand the app is listed only after the author agrees, and is removed on the author's request the same day.
+          required: true
